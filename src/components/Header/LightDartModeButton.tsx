@@ -18,7 +18,7 @@ const StyledChangeButton = styled.button`
   border-radius: 15px;
 `;
 
-function LightDartMode() {
+function LightDartModeButton() {
   const changeMode = () => {
   };
 
@@ -32,4 +32,4 @@ function LightDartMode() {
   );
 };
 
-export default LightDartMode;
+export default LightDartModeButton;

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
+import * as S from './WeatherListStyle';
 
-interface WeatherListProps {
+type WeatherListProps = {
   weatherDatas: [];
-  getWeatherDatas: () => void;
+  getWeatherDatas: (cityName: string) => void;
   loading: boolean;
   error: null | {};
 }
@@ -20,7 +21,6 @@ function WeatherList({
 
   return (
     <div>
-
     </div>
   );
 };

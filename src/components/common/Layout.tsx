@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Header from '../Header/index';
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode,
 }
 

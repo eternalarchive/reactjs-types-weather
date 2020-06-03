@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import NowTime from './NowTime';
-import LightDarkMode from './LightDartMode';
+import LightDarkMode from './LightDartModeButton';
 import * as S from './HeaderStyle';
 
 const StyledHeader = styled.header`

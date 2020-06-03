@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AddCity() {
+function Popup() {
   return (
     <div>
 
@@ -8,4 +8,4 @@ function AddCity() {
   );
 };
 
-export default AddCity;
+export default Popup;

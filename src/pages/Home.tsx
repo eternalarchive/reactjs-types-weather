@@ -4,6 +4,7 @@ import Layout from '../components/common/Layout';
 function Home() {
   return (
     <Layout>
+
     </Layout>
   );
 };
