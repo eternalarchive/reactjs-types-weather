@@ -1,10 +1,11 @@
 import React from 'react';
+import * as S from './WeatherListStyle';
 
 function WeatherBox() {
   return (
-    <div>
-
-    </div>
+    <S.WeatherBox>
+      <S.CityNametext>Seoul</S.CityNametext>
+    </S.WeatherBox>
   );
 };
 

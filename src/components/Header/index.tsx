@@ -1,23 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import NowTime from './NowTime';
-import LightDarkMode from './LightDartModeButton';
 import * as S from './HeaderStyle';
-
-const StyledHeader = styled.header`
-  background-color: #eee;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-`;
+import NowTime from './NowTime';
+import LightDartModeButton from './LightDarkModeButton';
 
 function Header() {
   return (
-    <StyledHeader>
-      <span>BlueWeather</span>
+    <S.HeaderBox>
+      <S.HeaderTitle>Blue Weather</S.HeaderTitle>
       <NowTime />
-      <LightDarkMode />
-    </StyledHeader>
+      <LightDartModeButton />
+    </S.HeaderBox>
   );
 };
 
