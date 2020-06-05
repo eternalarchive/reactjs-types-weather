@@ -1,21 +1,20 @@
 import React from 'react';
 import Layout from '../components/common/Layout';
-import SearchCityInput from '../components/common/SearchCityInput';
-import WeatherBox from '../components/WeatherList/WeatherBox';
+import * as S from '../components/PagesStyle';
 import styled from 'styled-components';
-
-const StyledHomeTitle = styled.h2`
-  font-size: 7.2rem;
-`;
+import WeatherListContainer from '../container/WeatherListContainer';
+import SearchCityInputContainer from '../container/SearchCityInputContainer';
 
 function Home() {
   return (
     <Layout>
-      <div>
-        <StyledHomeTitle>Hello,<br />Blueweather</StyledHomeTitle>
-        <SearchCityInput />
-      </div>
-      <WeatherBox />
+      <S.HomeLayout>
+        <S.TitleArea>
+          <S.HomeTitle>Hello,<br />Blueweather</S.HomeTitle>
+          <SearchCityInputContainer />
+        </S.TitleArea>
+        <WeatherListContainer />
+      </S.HomeLayout>
     </Layout>
   );
 };

@@ -73,3 +73,8 @@ body {
 ul, ol, li {
 	list-style: none;
 }
+
+button {
+	border: 0;
+	background: transparent;
+}
