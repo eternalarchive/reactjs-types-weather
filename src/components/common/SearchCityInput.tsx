@@ -1,6 +1,9 @@
 import React, { createRef } from 'react';
 import styled from 'styled-components';
 
+const StyledInputArea = styled.div`
+`;
+
 const StyledCityInput = styled.input`
   background-color: rgba(255, 255, 255, 0);
   width: 30rem;
@@ -19,11 +22,8 @@ const StyledSearchButton = styled.button`
   width: 3rem;
   height: 3rem;
   margin: 10px 0 0 -35px;
-`;
-
-const StyledButtonImg = styled.img`
-  width: 100%;
-  height: 100%;
+  outline: none;
+  cursor: pointer;
 `;
 
 type SearchCityInputProps = {
@@ -54,7 +54,7 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
   };
 
   return (
-    <div>
+    <StyledInputArea>
       <StyledCityInput
         onKeyPress={(e) => SearchCity(e)}
         placeholder="Enter your City!"
@@ -64,7 +64,7 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
       <StyledSearchButton onClick={SearchCityOnButton}>
       <i className="fas fa-search"></i>
       </StyledSearchButton>
-    </div>
+    </StyledInputArea>
   );
 };
 

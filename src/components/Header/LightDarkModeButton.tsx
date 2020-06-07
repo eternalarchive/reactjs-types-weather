@@ -1,18 +1,24 @@
 import React from 'react';
 import * as S from './HeaderStyle';
-import styled from 'styled-components';
 
-function LightDartModeButton() {
-  const changeMode = () => {
+type LightDartModeButtonProps = {
+  mode: boolean;
+  changeMode: (mode: boolean) => void;
+};
 
+function LightDartModeButton({ mode, changeMode }: LightDartModeButtonProps) {
+  const selectMode = () => {
+    console.log(mode);
+    changeMode(!mode);
   };
 
   return (
     <div>
-      <S.ModeText>Light</S.ModeText>
+      <S.ModeIcon className="fas fa-sun" />
       <S.ModeButtonBg>
-        <S.ChangeModeButton onClick={changeMode} />
+      <S.ChangeModeButton onClick={selectMode} mode={mode}/>
       </S.ModeButtonBg>
+      <S.ModeIcon className="fas fa-moon" />
     </div>
   );
 };

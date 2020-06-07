@@ -4,6 +4,6 @@ export const light = {
 };
 
 export const dark = {
-  color: 'white',
+  color: 'black',
   bgImg: '/images/dark-mode.jpg',
 };

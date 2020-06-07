@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import * as S from './HeaderStyle';
-import styled from 'styled-components';
 
 function NowTime() {
   return (

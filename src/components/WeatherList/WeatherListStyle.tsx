@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Tmode } from '../../redux/modules/types';
+import media from '../../libs/MediaQuery';
 
 export const WeatherSection = styled.section`
   width: 40rem;
@@ -6,6 +8,11 @@ export const WeatherSection = styled.section`
   height: 70vh;
   background-color: transparent;
   overflow: scroll;
+  ${media.mobile`
+    height: auto;
+    overflow: auto;
+    margin-top: 30px;
+  `}
 `;
 
 export const WeatherTitle = styled.h2`
@@ -33,9 +40,9 @@ export const WeatherLi = styled.li`
   :nth-last-child() {
     margin-bottom: 0;
   }
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
   :hover {
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
 `;
 
@@ -49,7 +56,7 @@ export const NowTempText = styled.p`
 
 export const NowMainWeatherText = styled.p`
   text-align: center;
-  padding-right: 10px;
+  padding-right: 18px;
 `;
 
 export const InfoWrap = styled.div`

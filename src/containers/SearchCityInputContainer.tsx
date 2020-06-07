@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { rootState } from '../redux/modules/reducer';
 import { getWeatherSaga } from '../redux/modules/search';
 
-function SearchCityInputContainer(props: any) {
+function SearchCityInputContainer() {
   const loading: boolean = useSelector((state: rootState) => state.search.loading);
   const error: null | {} = useSelector((state: rootState) => state.search.error);
   const dispatch = useDispatch();

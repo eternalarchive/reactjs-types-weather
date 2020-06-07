@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import * as S from './WeatherListStyle';
-import styled from 'styled-components';
 import { TWeather } from '../../redux/modules/types';
 import WeatherBox from './WeatherBox';
 
@@ -8,12 +7,18 @@ type WeatherListProps = {
   weatherDatas: TWeather[];
   loading: boolean;
   error: null | {};
+  mode: boolean;
+  selectCity: (cityId:number) => void;
+  deleteWeather: (id: number) => void;
 }
 
 function WeatherList({
   weatherDatas,
   loading,
   error,
+  mode,
+  selectCity,
+  deleteWeather,
 }: WeatherListProps) {
 
   useEffect(() => {
@@ -24,7 +29,7 @@ function WeatherList({
     <S.WeatherSection>
       <S.WeatherTitle>Weather List</S.WeatherTitle>
       <S.ListBox>
-        {weatherDatas.map(weatherData => <WeatherBox weatherData={weatherData}/>)}
+        {weatherDatas && weatherDatas.map(weatherData => <WeatherBox weatherData={weatherData} mode={mode} selectCity={selectCity} deleteWeather={deleteWeather}/>)}
       </S.ListBox>
     </S.WeatherSection>
   );

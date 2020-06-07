@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { Tmode } from '../../redux/modules/types';
 
 export const HeaderBox = styled.header`
   display: flex;
@@ -22,26 +23,28 @@ export const NowTimeText = styled.span`
 `;
 
 // LightDarkMode
-export const ModeText = styled.span`
-  display: inline-block;
-  margin-right: 5px;
+export const ModeIcon = styled.i`
+  vertical-align: middle;
+  padding: 0 5px;
 `;
 
 export const ModeButtonBg = styled.div`
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.6);
   position: relative;
-  width: 30px;
-  height: 15px;
-  border-radius: 15px;
+  width: 35px;
+  height: 20px;
+  border-radius: 20px;
 `;
 
 export const ChangeModeButton = styled.button`
   position: absolute;
-  left: 0;
+  ${({ mode }: Tmode) => mode ? css`left: 0;` : css`right: 0;`}
   top: 0;
-  width: 15px;
-  height: 15px;
-  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
   background-color: white;
+  outline: none;
+  cursor: pointer;
 `;

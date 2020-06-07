@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import * as S from './HeaderStyle';
 import NowTime from './NowTime';
-import LightDartModeButton from './LightDarkModeButton';
+import ModeContainer from '../../containers/ModeContainer';
 
 function Header() {
   return (
     <S.HeaderBox>
       <S.HeaderTitle>Blue Weather</S.HeaderTitle>
       <NowTime />
-      <LightDartModeButton />
+      <ModeContainer />
     </S.HeaderBox>
   );
 };
