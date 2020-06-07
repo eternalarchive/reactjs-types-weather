@@ -14,6 +14,7 @@ const StyledCityInput = styled.input`
   outline: none;
   ::placeholder {
     color: inherit;
+    font-size: 1.6rem;
   }
 `;
 
@@ -36,7 +37,9 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
   const cityInputRef: React.RefObject<HTMLInputElement> = createRef();
 
   const SearchCity = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const regexr = /[ㄱ-ㅎㅏ-ㅣ]+/g;
     if (!cityInputRef.current) return;
+    if(regexr.test(cityInputRef.current.value)) return cityInputRef.current.value = '';
     const cityName = cityInputRef.current.value.trim();
     if (e.key === 'Enter' && cityName !== '') {
       getWeather(cityName);
@@ -56,8 +59,8 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
   return (
     <StyledInputArea>
       <StyledCityInput
-        onKeyPress={(e) => SearchCity(e)}
-        placeholder="Enter your City!"
+        onKeyUp={(e) => SearchCity(e)}
+        placeholder="ENTER YOUR CITY IN ENGLISH!"
         autoFocus={true}
         ref={cityInputRef}
       />

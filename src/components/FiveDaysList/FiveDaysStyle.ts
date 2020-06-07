@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Tmode } from '../../redux/modules/types';
+import media from '../../libs/MediaQuery';
 
 export const FiveDaysSection = styled.section`
   position: relative;
@@ -7,6 +8,9 @@ export const FiveDaysSection = styled.section`
   width: 95%;
   margin: 0 auto;
   padding: 50px 40px;
+  ${media.mobile`
+    padding: 40px 30px;
+  `}
 `;
 
 export const FiveDaysSectionTitle = styled.h2`
@@ -70,6 +74,7 @@ export const WeatherLi = styled.li`
   background-color: ${({ mode }: Tmode) => mode ? 'rgba(104, 172, 240, 0.6)' : 'rgba(34, 50, 77, 0.6)'};
   padding: 20px 30px;
   margin: 0 10px;
+  backdrop-filter: blur(3px);
 `;
 
 

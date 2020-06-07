@@ -2,8 +2,8 @@ import { css } from 'styled-components';
 
 const sizes = {
   desktop: 1025,
-  tablet: 1024,
-  mobile: 920,
+  tablet: 920,
+  mobile: 500,
 };
 
 const sizeCheck = (label: string) => {

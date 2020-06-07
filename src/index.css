@@ -78,3 +78,7 @@ button {
 	border: 0;
 	background: transparent;
 }
+
+#root {
+	min-width: 428px;
+}

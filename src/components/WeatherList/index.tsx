@@ -29,7 +29,7 @@ function WeatherList({
     <S.WeatherSection>
       <S.WeatherTitle>Weather List</S.WeatherTitle>
       <S.ListBox>
-        {weatherDatas && weatherDatas.map(weatherData => <WeatherBox weatherData={weatherData} mode={mode} selectCity={selectCity} deleteWeather={deleteWeather}/>)}
+        <WeatherBox weatherDatas={weatherDatas} mode={mode} selectCity={selectCity} deleteWeather={deleteWeather}/>
       </S.ListBox>
     </S.WeatherSection>
   );

@@ -16,8 +16,12 @@ const StyledBg = styled.div`
   height: 100vh;
   padding: 20px 50px;
   overflow: hidden;
+  ${media.tablet`
+    overflow: auto;
+  `}
   ${media.mobile`
     overflow: auto;
+    padding: 20px 20px;
   `}
 `;
 
@@ -28,7 +32,6 @@ const StyledArea = styled.div`
   width: 100%;
   height: 90%;
   ${media.mobile`
-
   `}
 `;
 

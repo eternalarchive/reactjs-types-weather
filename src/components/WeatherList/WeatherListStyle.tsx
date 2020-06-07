@@ -8,10 +8,15 @@ export const WeatherSection = styled.section`
   height: 70vh;
   background-color: transparent;
   overflow: scroll;
-  ${media.mobile`
+  ${media.tablet`
     height: auto;
     overflow: auto;
     margin-top: 30px;
+  `}
+  ${media.mobile`
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
   `}
 `;
 
@@ -32,15 +37,17 @@ export const ListBox = styled.ul`
 
 // weatherBox
 export const WeatherLi = styled.li`
+  background-color: transparent;
   display: flex;
   position: relative;
   width: 95%;
   padding: 20px 30px;
   margin-bottom: 20px;
+  background-color: ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
+  backdrop-filter: blur(3px);
   :nth-last-child() {
     margin-bottom: 0;
   }
-  background-color: ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
   :hover {
     box-shadow: 5px 5px 10px ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
@@ -87,14 +94,17 @@ export const MaxMinTempText = styled.span`
 
 export const DeleteButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
 `;
 
 export const ViewMore = styled.span`
   text-decoration: underline;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  right: 15px;
+  padding: 5px;
   cursor: pointer;
 `;
