@@ -9,13 +9,17 @@ function Home() {
     <Layout>
       <S.HomeLayout>
         <S.TitleArea>
-          <S.HomeTitle>Hello,<br />Blueweather</S.HomeTitle>
+          <S.HomeTitle>
+            Hello,
+            <br />
+            Blueweather
+          </S.HomeTitle>
           <SearchCityInputContainer />
         </S.TitleArea>
         <WeatherListContainer />
       </S.HomeLayout>
     </Layout>
   );
-};
+}
 
 export default Home;

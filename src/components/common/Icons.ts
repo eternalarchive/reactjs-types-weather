@@ -1,11 +1,11 @@
 export const icons = {
-  sunny: "fas fa-sun",
-  sun_cloud: "fas fa-cloud-sun",
-  cloud: "fas fa-cloud",
-  rain: "fas fa-cloud-rain",
-  snow: "fas fa-snowflake",
-  thunder: "fas fa-bolt",
-  mist: "fas fa-water",
+  sunny: 'fas fa-sun',
+  sun_cloud: 'fas fa-cloud-sun',
+  cloud: 'fas fa-cloud',
+  rain: 'fas fa-cloud-rain',
+  snow: 'fas fa-snowflake',
+  thunder: 'fas fa-bolt',
+  mist: 'fas fa-water',
 };
 
 export function getIcon(main: string): string | void {

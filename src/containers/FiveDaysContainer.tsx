@@ -6,8 +6,12 @@ import { Tforecast, TWeather } from '../redux/modules/types';
 
 function FiveDaysContainer() {
   const mode: boolean = useSelector((state: rootState) => state.view.mode);
-  const selectedNow: TWeather[] = useSelector((state: rootState) => state.view.selectedNow);
-  const selectedDatas: Tforecast[] = useSelector((state: rootState) => state.view.selectedDatas);
+  const selectedNow: TWeather[] = useSelector(
+    (state: rootState) => state.view.selectedNow,
+  );
+  const selectedDatas: Tforecast[] = useSelector(
+    (state: rootState) => state.view.selectedDatas,
+  );
 
   return (
     <FiveDaysList
@@ -16,6 +20,6 @@ function FiveDaysContainer() {
       selectedDatas={selectedDatas}
     />
   );
-};
+}
 
 export default FiveDaysContainer;

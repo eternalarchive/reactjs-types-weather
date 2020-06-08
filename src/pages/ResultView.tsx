@@ -9,6 +9,6 @@ function ResultView() {
       <FiveDaysContainer />
     </Layout>
   );
-};
+}
 
 export default withWeather(ResultView, false);

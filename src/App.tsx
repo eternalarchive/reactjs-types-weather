@@ -8,9 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/weather/forecast" component={ResultView}/>
-        <Route exact path="/" component={Home}/>
-        <Route component={NotFound}/>
+        <Route path="/weather/forecast" component={ResultView} />
+        <Route exact path="/" component={Home} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );

@@ -39,7 +39,14 @@ export const ModeButtonBg = styled.div`
 
 export const ChangeModeButton = styled.button`
   position: absolute;
-  ${({ mode }: Tmode) => mode ? css`left: 0;` : css`right: 0;`}
+  ${({ mode }: Tmode) =>
+    mode
+      ? css`
+          left: 0;
+        `
+      : css`
+          right: 0;
+        `}
   top: 0;
   width: 20px;
   height: 20px;

@@ -11,9 +11,14 @@ type WeatherBoxProps = {
   deleteWeather: (id: number) => void;
 };
 
-function WeatherBox({ weatherDatas, mode, selectCity, deleteWeather }: WeatherBoxProps) {
+function WeatherBox({
+  weatherDatas,
+  mode,
+  selectCity,
+  deleteWeather,
+}: WeatherBoxProps) {
   const deleteCity = (id: number) => {
-    deleteWeather(id)
+    deleteWeather(id);
   };
 
   const openWeatherForecast = (cityId: number) => {
@@ -22,8 +27,12 @@ function WeatherBox({ weatherDatas, mode, selectCity, deleteWeather }: WeatherBo
 
   return (
     <>
-      {weatherDatas.map(weatherData =>
-        <S.WeatherLi key={weatherData.id} onClick={() => openWeatherForecast(weatherData.id)} mode={mode}>
+      {weatherDatas.map((weatherData) => (
+        <S.WeatherLi
+          key={weatherData.id}
+          onClick={() => openWeatherForecast(weatherData.id)}
+          mode={mode}
+        >
           <S.NowMainInfoWrap>
             <S.NowTempText>{Math.round(weatherData.main.temp)}°</S.NowTempText>
             <S.NowMainWeatherText>
@@ -33,13 +42,19 @@ function WeatherBox({ weatherDatas, mode, selectCity, deleteWeather }: WeatherBo
           <S.InfoWrap>
             <S.SelectedCity>
               {weatherData.name}
-              <S.WeatherIcon className={`${getIcon(weatherData.weather[0].main)} fa-xs`} />
+              <S.WeatherIcon
+                className={`${getIcon(weatherData.weather[0].main)} fa-xs`}
+              />
             </S.SelectedCity>
             <S.MaxMinTempWrap>
-              <S.MaxMinTempText>H {Math.round(weatherData.main.temp_max)}°</S.MaxMinTempText>
-              <S.MaxMinTempText>L {Math.round(weatherData.main.temp_min)}°</S.MaxMinTempText>
+              <S.MaxMinTempText>
+                H {Math.round(weatherData.main.temp_max)}°
+              </S.MaxMinTempText>
+              <S.MaxMinTempText>
+                L {Math.round(weatherData.main.temp_min)}°
+              </S.MaxMinTempText>
             </S.MaxMinTempWrap>
-            </S.InfoWrap>
+          </S.InfoWrap>
           <Link to="/weather/forecast">
             <S.ViewMore>View More</S.ViewMore>
           </Link>
@@ -47,9 +62,9 @@ function WeatherBox({ weatherDatas, mode, selectCity, deleteWeather }: WeatherBo
             <i className="fas fa-times" />
           </S.DeleteButton>
         </S.WeatherLi>
-      )}
+      ))}
     </>
   );
-};
+}
 
 export default WeatherBox;

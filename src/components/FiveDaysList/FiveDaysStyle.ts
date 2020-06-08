@@ -29,7 +29,7 @@ export const CityText = styled.p`
 `;
 
 export const NowTempText = styled.p`
-  font-size: 6.0rem;
+  font-size: 6rem;
 `;
 
 export const NowFeelTempText = styled.p`
@@ -71,12 +71,12 @@ export const WeatherLi = styled.li`
   text-align: center;
   flex-basis: 20%;
   min-width: 16rem;
-  background-color: ${({ mode }: Tmode) => mode ? 'rgba(104, 172, 240, 0.6)' : 'rgba(34, 50, 77, 0.6)'};
+  background-color: ${({ mode }: Tmode) =>
+    mode ? 'rgba(104, 172, 240, 0.6)' : 'rgba(34, 50, 77, 0.6)'};
   padding: 20px 30px;
   margin: 0 10px;
   backdrop-filter: blur(3px);
 `;
-
 
 export const DayText = styled.p`
   font-size: 2.2rem;
@@ -90,8 +90,7 @@ export const WeatherMain = styled.p`
   padding: 5px 0;
 `;
 
-export const TempTextWrap = styled.div`
-`;
+export const TempTextWrap = styled.div``;
 
 export const TempText = styled.span`
   font-size: 1.8rem;
@@ -109,6 +108,4 @@ export const HuIcon = styled.i`
   margin-right: 2px;
 `;
 
-export const HuText = styled.span`
-
-`;
+export const HuText = styled.span``;

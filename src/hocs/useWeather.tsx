@@ -5,7 +5,9 @@ import { rootState } from '../redux/modules/reducer';
 
 function withAuth(Component: any, isDatas: boolean) {
   function WrappedComponent(props: any) {
-    const selectedDatas = useSelector((state: rootState) => state.view.selectedDatas);
+    const selectedDatas = useSelector(
+      (state: rootState) => state.view.selectedDatas,
+    );
 
     if (!isDatas) {
       if (!selectedDatas.length) {
@@ -21,6 +23,6 @@ function withAuth(Component: any, isDatas: boolean) {
 
 withAuth.defaultProps = {
   isDatas: true,
-}
+};
 
 export default withAuth;

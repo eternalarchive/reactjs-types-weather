@@ -17,27 +17,39 @@ function FiveDaysList({ mode, selectedNow, selectedDatas }: FiveDaysListProps) {
 
   return (
     <S.FiveDaysSection>
-      {selectedNow.map(selectedNowData =>
+      {selectedNow.map((selectedNowData) => (
         <>
-          <S.FiveDaysSectionTitle>{selectedNowData.name} Weather Forecast</S.FiveDaysSectionTitle>
-          <S.CityText>{selectedNowData.name}, {selectedNowData.weather[0].main}</S.CityText>
-          <S.NowTempText>{Math.round(selectedNowData.main.temp)}°</S.NowTempText>
-          <S.NowFeelTempText>Feels like Temp {Math.round(selectedNowData.main.feels_like)}°</S.NowFeelTempText>
+          <S.FiveDaysSectionTitle>
+            {selectedNowData.name} Weather Forecast
+          </S.FiveDaysSectionTitle>
+          <S.CityText>
+            {selectedNowData.name}, {selectedNowData.weather[0].main}
+          </S.CityText>
+          <S.NowTempText>
+            {Math.round(selectedNowData.main.temp)}°
+          </S.NowTempText>
+          <S.NowFeelTempText>
+            Feels like Temp {Math.round(selectedNowData.main.feels_like)}°
+          </S.NowFeelTempText>
           <S.NowInfoWrap>
-            <S.NowMaxMinTempText>H {Math.round(selectedNowData.main.temp_max)}°</S.NowMaxMinTempText>
-            <S.NowMaxMinTempText>L {Math.round(selectedNowData.main.temp_min)}°</S.NowMaxMinTempText>
+            <S.NowMaxMinTempText>
+              H {Math.round(selectedNowData.main.temp_max)}°
+            </S.NowMaxMinTempText>
+            <S.NowMaxMinTempText>
+              L {Math.round(selectedNowData.main.temp_min)}°
+            </S.NowMaxMinTempText>
             <S.NowHutext>Humidity {selectedNowData.main.humidity}%</S.NowHutext>
           </S.NowInfoWrap>
         </>
-      )}
+      ))}
       <S.DayListBox>
-        <DayBox mode={mode} selectedDatas={selectedDatas}/>
+        <DayBox mode={mode} selectedDatas={selectedDatas} />
       </S.DayListBox>
       <Link to="/">
         <S.BacktoHomeIcon className="fas fa-arrow-left fa-2x" />
       </Link>
     </S.FiveDaysSection>
   );
-};
+}
 
 export default FiveDaysList;

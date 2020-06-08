@@ -8,10 +8,13 @@ import media from '../../libs/MediaQuery';
 
 type LayoutProps = {
   children: React.ReactNode;
-}
+};
 
 const StyledBg = styled.div`
-  background-image: url(${({ mode }: Tmode) => mode ? '/images/light-mode.jpg' : '/images/dark-mode.jpg'});
+  ${({ mode }: Tmode) =>
+    mode
+      ? `background-image: url('/images/light-mode.jpg')`
+      : `background-image: url('/images/dark-mode.jpg')`};
   background-color: white;
   height: 100vh;
   padding: 20px 50px;
@@ -41,11 +44,9 @@ function Layout({ children }: LayoutProps) {
   return (
     <StyledBg mode={mode}>
       <Header />
-      <StyledArea>
-        {children}
-      </StyledArea>
+      <StyledArea>{children}</StyledArea>
     </StyledBg>
   );
-};
+}
 
 export default Layout;

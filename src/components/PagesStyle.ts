@@ -21,5 +21,4 @@ export const HomeLayout = styled.div`
   `}
 `;
 
-export const TitleArea = styled.div`
-`;
+export const TitleArea = styled.div``;

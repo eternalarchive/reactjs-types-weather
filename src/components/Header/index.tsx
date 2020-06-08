@@ -11,6 +11,6 @@ function Header() {
       <ModeContainer />
     </S.HeaderBox>
   );
-};
+}
 
 export default Header;

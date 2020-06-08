@@ -8,16 +8,14 @@ function ModeContainer() {
   const mode: boolean = useSelector((state: rootState) => state.view.mode);
   const dispatch = useDispatch();
 
-  const changeMode = useCallback((mode: boolean) => {
-    dispatch(SelectModeSaga(mode));
-  }, [dispatch])
-
-  return (
-    <LightDartModeButton
-      mode={mode}
-      changeMode={changeMode}
-    />
+  const changeMode = useCallback(
+    (mode: boolean) => {
+      dispatch(SelectModeSaga(mode));
+    },
+    [dispatch],
   );
-};
+
+  return <LightDartModeButton mode={mode} changeMode={changeMode} />;
+}
 
 export default ModeContainer;

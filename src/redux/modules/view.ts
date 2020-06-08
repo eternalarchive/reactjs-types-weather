@@ -1,5 +1,10 @@
 import { put, select, takeLatest } from 'redux-saga/effects';
-import { createAction, createReducer, createAsyncAction, ActionType } from 'typesafe-actions';
+import {
+  createAction,
+  createReducer,
+  createAsyncAction,
+  ActionType,
+} from 'typesafe-actions';
 import { AxiosError } from 'axios';
 import { Tforecast, TWeather } from './types';
 
@@ -15,22 +20,33 @@ type TViewSuccess = {
   selectedDatas?: Tforecast[];
 };
 
-const getViewAction = createAsyncAction(pending, success, fail)<string, TViewSuccess, AxiosError>();
+const getViewAction = createAsyncAction(pending, success, fail)<
+  string,
+  TViewSuccess,
+  AxiosError
+>();
 type ViewAction = ActionType<typeof getViewAction>;
 
 export const getSelectedCitySaga = createAction('GET_CITY_ID_SAGA')<number>();
 
 function* getCityIdSaga({ payload }: ReturnType<typeof getSelectedCitySaga>) {
-  const weatherDatas = yield select(state => state.search.weatherDatas);
-  const forecastDatas = yield select(state => state.search.forecastDatas);
-  const pickNowDatas = weatherDatas.filter((weatherData: { id: number; }) => weatherData.id === payload);
-  const pickForecastDatas = forecastDatas.filter((forecastData: { city: { id: number; }; })=> forecastData.city.id === payload);
+  const weatherDatas = yield select((state) => state.search.weatherDatas);
+  const forecastDatas = yield select((state) => state.search.forecastDatas);
+  const pickNowDatas = weatherDatas.filter(
+    (weatherData: { id: number }) => weatherData.id === payload,
+  );
+  const pickForecastDatas = forecastDatas.filter(
+    (forecastData: { city: { id: number } }) =>
+      forecastData.city.id === payload,
+  );
   try {
     yield put(getViewAction.request(''));
-    yield put(getViewAction.success({
-      selectedNow: pickNowDatas,
-      selectedDatas: pickForecastDatas,
-    }));
+    yield put(
+      getViewAction.success({
+        selectedNow: pickNowDatas,
+        selectedDatas: pickForecastDatas,
+      }),
+    );
   } catch (error) {
     console.log(error);
     yield put(getViewAction.failure(error));
@@ -42,9 +58,11 @@ export const SelectModeSaga = createAction('CHANGE_MODE_SAGA')<boolean>();
 function* changeModeSaga({ payload }: ReturnType<typeof SelectModeSaga>) {
   try {
     yield put(getViewAction.request(''));
-    yield put(getViewAction.success({
-      mode: payload,
-    }));
+    yield put(
+      getViewAction.success({
+        mode: payload,
+      }),
+    );
   } catch (error) {
     console.log(error);
     yield put(getViewAction.failure(error));
@@ -62,7 +80,7 @@ type TinitialState = {
   selectedDatas: Tforecast[];
   loading: boolean;
   error: null | {};
-}
+};
 
 // initialState
 const initialState: TinitialState = {
@@ -82,7 +100,7 @@ const view = createReducer<TinitialState, ViewAction>(initialState, {
   }),
   [success]: (state, action) => ({
     ...state,
-    ...action.payload as TViewSuccess,
+    ...(action.payload as TViewSuccess),
     loading: false,
     error: null,
   }),

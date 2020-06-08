@@ -8,7 +8,6 @@ type LightDartModeButtonProps = {
 
 function LightDartModeButton({ mode, changeMode }: LightDartModeButtonProps) {
   const selectMode = () => {
-    console.log(mode);
     changeMode(!mode);
   };
 
@@ -16,11 +15,11 @@ function LightDartModeButton({ mode, changeMode }: LightDartModeButtonProps) {
     <div>
       <S.ModeIcon className="fas fa-sun" />
       <S.ModeButtonBg>
-      <S.ChangeModeButton onClick={selectMode} mode={mode}/>
+        <S.ChangeModeButton onClick={selectMode} mode={mode} />
       </S.ModeButtonBg>
       <S.ModeIcon className="fas fa-moon" />
     </div>
   );
-};
+}
 
 export default LightDartModeButton;

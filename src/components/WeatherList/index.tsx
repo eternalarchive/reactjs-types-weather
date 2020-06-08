@@ -8,9 +8,9 @@ type WeatherListProps = {
   loading: boolean;
   error: null | {};
   mode: boolean;
-  selectCity: (cityId:number) => void;
+  selectCity: (cityId: number) => void;
   deleteWeather: (id: number) => void;
-}
+};
 
 function WeatherList({
   weatherDatas,
@@ -20,7 +20,6 @@ function WeatherList({
   selectCity,
   deleteWeather,
 }: WeatherListProps) {
-
   useEffect(() => {
     console.log(weatherDatas);
   }, [weatherDatas]);
@@ -29,10 +28,15 @@ function WeatherList({
     <S.WeatherSection>
       <S.WeatherTitle>Weather List</S.WeatherTitle>
       <S.ListBox>
-        <WeatherBox weatherDatas={weatherDatas} mode={mode} selectCity={selectCity} deleteWeather={deleteWeather}/>
+        <WeatherBox
+          weatherDatas={weatherDatas}
+          mode={mode}
+          selectCity={selectCity}
+          deleteWeather={deleteWeather}
+        />
       </S.ListBox>
     </S.WeatherSection>
   );
-};
+}
 
 export default WeatherList;

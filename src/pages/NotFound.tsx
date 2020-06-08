@@ -8,7 +8,8 @@ function NotFound() {
     <Layout>
       <S.TitleArea>
         <S.HomeTitle>
-          Sorry,<br />
+          Sorry,
+          <br />
           <Link to="/">
             Back To Home
             <i className="fas fa-home" />
@@ -17,6 +18,6 @@ function NotFound() {
       </S.TitleArea>
     </Layout>
   );
-};
+}
 
 export default NotFound;

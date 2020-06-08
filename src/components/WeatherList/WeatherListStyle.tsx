@@ -31,9 +31,7 @@ export const WeatherTitle = styled.h2`
   white-space: nowrap;
 `;
 
-export const ListBox = styled.ul`
-
-`;
+export const ListBox = styled.ul``;
 
 // weatherBox
 export const WeatherLi = styled.li`
@@ -43,19 +41,20 @@ export const WeatherLi = styled.li`
   width: 95%;
   padding: 20px 30px;
   margin-bottom: 20px;
-  background-color: ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
+  background-color: ${({ mode }: Tmode) =>
+    mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
   backdrop-filter: blur(3px);
   :nth-last-child() {
     margin-bottom: 0;
   }
   :hover {
-    box-shadow: 5px 5px 10px ${({ mode }: Tmode) => mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
+    box-shadow: 5px 5px 10px
+      ${({ mode }: Tmode) =>
+        mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
 `;
 
-export const NowMainInfoWrap = styled.div`
-
-`;
+export const NowMainInfoWrap = styled.div``;
 
 export const NowTempText = styled.p`
   font-size: 7.2rem;
@@ -82,9 +81,7 @@ export const WeatherIcon = styled.i`
   vertical-align: middle;
 `;
 
-export const MaxMinTempWrap = styled.div`
-
-`;
+export const MaxMinTempWrap = styled.div``;
 
 export const MaxMinTempText = styled.span`
   & ~ & {

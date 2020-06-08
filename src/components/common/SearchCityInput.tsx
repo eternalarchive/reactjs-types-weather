@@ -1,8 +1,7 @@
 import React, { createRef } from 'react';
 import styled from 'styled-components';
 
-const StyledInputArea = styled.div`
-`;
+const StyledInputArea = styled.div``;
 
 const StyledCityInput = styled.input`
   background-color: rgba(255, 255, 255, 0);
@@ -39,7 +38,8 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
   const SearchCity = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const regexr = /[ㄱ-ㅎㅏ-ㅣ]+/g;
     if (!cityInputRef.current) return;
-    if(regexr.test(cityInputRef.current.value)) return cityInputRef.current.value = '';
+    if (regexr.test(cityInputRef.current.value))
+      return (cityInputRef.current.value = '');
     const cityName = cityInputRef.current.value.trim();
     if (e.key === 'Enter' && cityName !== '') {
       getWeather(cityName);
@@ -65,10 +65,10 @@ function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
         ref={cityInputRef}
       />
       <StyledSearchButton onClick={SearchCityOnButton}>
-      <i className="fas fa-search"></i>
+        <i className="fas fa-search"></i>
       </StyledSearchButton>
     </StyledInputArea>
   );
-};
+}
 
 export default SearchCityInput;
