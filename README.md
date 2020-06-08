@@ -1,44 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blue Weather
 
-## Available Scripts
+## 주제
 
-In the project directory, you can run:
+openweathermaps api를 활용한 도시별 날씨 서비스
 
-### `npm start`
+<br />
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## MVP
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. 도시 입력시 해당 날씨 데이터 View 구현 및 삭제기능
+2. 1번 도시 목록에서 선택한 도시의 5일간 날씨 데이터 View 구현
+3. 반응형 웹 구현
+4. Light-mode & Dark-mode
+5. 한글 입력 방지
+6. 중복 도시 입력 방지
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 활용 스펙
 
-### `npm run build`
+### 주요 스펙
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. HTML5
+2. CSS3
+3. JavaScript(ES6+)
+4. TypeScript
+5. ReactJS
+6. Redux(redux-saga)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 추가 스펙
 
-### `npm run eject`
+1. styled-components
+2. axios
+3. react-router
+4. React-router-dom
+5. typesafe-actions
+6. moment
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 스크린샷
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![https://user-images.githubusercontent.com/54792574/84064886-6173fc80-a9fe-11ea-9af8-5dd6c17a8251.jpg]()
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![https://user-images.githubusercontent.com/54792574/84064766-2c67aa00-a9fe-11ea-9bcc-6b21e7d04f61.jpg]()
 
-## Learn More
+![https://user-images.githubusercontent.com/54792574/84064768-2d004080-a9fe-11ea-8a03-089fa6043296.jpg]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![https://user-images.githubusercontent.com/54792574/84064769-2e316d80-a9fe-11ea-9931-63221aeba038.jpg]()

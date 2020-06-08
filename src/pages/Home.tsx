@@ -12,7 +12,7 @@ function Home() {
           <S.HomeTitle>
             Hello,
             <br />
-            Blueweather
+            Blue Weather
           </S.HomeTitle>
           <SearchCityInputContainer />
         </S.TitleArea>

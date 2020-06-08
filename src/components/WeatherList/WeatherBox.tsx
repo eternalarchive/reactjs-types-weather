@@ -32,6 +32,7 @@ function WeatherBox({
           key={weatherData.id}
           onClick={() => openWeatherForecast(weatherData.id)}
           mode={mode}
+          tabIndex={0}
         >
           <S.NowMainInfoWrap>
             <S.NowTempText>{Math.round(weatherData.main.temp)}°</S.NowTempText>

@@ -15,7 +15,7 @@ function useWeekDatas(fiveDaysDatas: any) {
 
   onlyFiveDatas.map((onlyFiveData: any) => {
     let dayNumber = new Date(onlyFiveData.dt_txt).getDay();
-    dayNumber = dayNumber === 6 ? 0 : dayNumber;
+    dayNumber = dayNumber === 6 ? -1 : dayNumber;
     onlyFiveData.day = week[dayNumber + 1];
     return onlyFiveData;
   });
