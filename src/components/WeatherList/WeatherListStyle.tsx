@@ -52,6 +52,9 @@ export const WeatherLi = styled.li`
       ${({ mode }: Tmode) =>
         mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
+  ${media.mobile`
+    width: 80%;
+  `}
 `;
 
 export const NowMainInfoWrap = styled.div``;

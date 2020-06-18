@@ -8,6 +8,9 @@ export const FiveDaysSection = styled.section`
   width: 95%;
   margin: 0 auto;
   padding: 50px 40px;
+  ${media.tablet`
+    padding: 40px 30px;
+  `}
   ${media.mobile`
     padding: 40px 30px;
   `}
