@@ -10,13 +10,9 @@ function WeatherListContainer() {
   const WeatherDatas: TWeather[] = useSelector(
     (state: rootState) => state.search.weatherDatas,
   );
-  const loading: boolean = useSelector(
-    (state: rootState) => state.search.loading,
-  );
-  const error: null | {} = useSelector(
-    (state: rootState) => state.search.error,
-  );
+
   const mode: boolean = useSelector((state: rootState) => state.view.mode);
+
   const dispatch = useDispatch();
 
   const selectCity = useCallback(
@@ -36,8 +32,6 @@ function WeatherListContainer() {
   return (
     <WeatherList
       weatherDatas={WeatherDatas}
-      loading={loading}
-      error={error}
       mode={mode}
       selectCity={selectCity}
       deleteWeather={deleteWeather}

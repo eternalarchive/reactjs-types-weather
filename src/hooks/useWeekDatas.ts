@@ -1,19 +1,15 @@
-import { List } from '../redux/modules/types';
+import { List, OnlyFiveData } from '../redux/modules/types';
 
-type useWeekDatasProps = {
-  fiveDaysDatas: List[];
-};
-
-function useWeekDatas(fiveDaysDatas: any) {
+function useWeekDatas(fiveDaysDatas: List[]) {
   const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const onlyFiveDatas =
-    fiveDaysDatas[0] &&
-    fiveDaysDatas[0].filter(
+    fiveDaysDatas &&
+    fiveDaysDatas.filter(
       (fiveDaysData: { dt_txt: string }) =>
         fiveDaysData.dt_txt.slice(-8) === '00:00:00',
     );
 
-  onlyFiveDatas.map((onlyFiveData: any) => {
+  onlyFiveDatas.map((onlyFiveData: OnlyFiveData) => {
     let dayNumber = new Date(onlyFiveData.dt_txt).getDay();
     dayNumber = dayNumber === 6 ? -1 : dayNumber;
     onlyFiveData.day = week[dayNumber + 1];

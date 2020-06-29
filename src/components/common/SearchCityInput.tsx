@@ -28,11 +28,9 @@ const StyledSearchButton = styled.button`
 
 type SearchCityInputProps = {
   getWeather: (cityName: string) => void;
-  loading: boolean;
-  error: null | {};
 };
 
-function SearchCityInput({ getWeather, loading, error }: SearchCityInputProps) {
+function SearchCityInput({ getWeather }: SearchCityInputProps) {
   const cityInputRef: React.RefObject<HTMLInputElement> = createRef();
 
   const SearchCity = (e: React.KeyboardEvent<HTMLInputElement>) => {

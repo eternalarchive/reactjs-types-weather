@@ -4,6 +4,9 @@ import media from '../libs/MediaQuery';
 // Home
 export const HomeTitle = styled.h2`
   font-size: 7.2rem;
+  ${media.mobile`
+    font-size: 6.0rem;
+  `}
 `;
 
 export const HomeLayout = styled.div`

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import DayBox from './DayBox';
 import { Link } from 'react-router-dom';
 import * as S from './FiveDaysStyle';
@@ -11,37 +11,27 @@ type FiveDaysListProps = {
 };
 
 function FiveDaysList({ mode, selectedNow, selectedDatas }: FiveDaysListProps) {
-  useEffect(() => {
-    console.log(selectedDatas);
-  }, [selectedDatas]);
-
   return (
     <S.FiveDaysSection>
-      {selectedNow.map((selectedNowData) => (
-        <>
-          <S.FiveDaysSectionTitle>
-            {selectedNowData.name} Weather Forecast
-          </S.FiveDaysSectionTitle>
-          <S.CityText>
-            {selectedNowData.name}, {selectedNowData.weather[0].main}
-          </S.CityText>
-          <S.NowTempText>
-            {Math.round(selectedNowData.main.temp)}°
-          </S.NowTempText>
-          <S.NowFeelTempText>
-            Feels like Temp {Math.round(selectedNowData.main.feels_like)}°
-          </S.NowFeelTempText>
-          <S.NowInfoWrap>
-            <S.NowMaxMinTempText>
-              H {Math.round(selectedNowData.main.temp_max)}°
-            </S.NowMaxMinTempText>
-            <S.NowMaxMinTempText>
-              L {Math.round(selectedNowData.main.temp_min)}°
-            </S.NowMaxMinTempText>
-            <S.NowHutext>Humidity {selectedNowData.main.humidity}%</S.NowHutext>
-          </S.NowInfoWrap>
-        </>
-      ))}
+      <S.FiveDaysSectionTitle>
+        {selectedNow[0].name} Weather Forecast
+      </S.FiveDaysSectionTitle>
+      <S.CityText>
+        {selectedNow[0].name}, {selectedNow[0].weather[0].main}
+      </S.CityText>
+      <S.NowTempText>{Math.round(selectedNow[0].main.temp)}°</S.NowTempText>
+      <S.NowFeelTempText>
+        Feels like Temp {Math.round(selectedNow[0].main.feels_like)}°
+      </S.NowFeelTempText>
+      <S.NowInfoWrap>
+        <S.NowMaxMinTempText>
+          H {Math.round(selectedNow[0].main.temp_max)}°
+        </S.NowMaxMinTempText>
+        <S.NowMaxMinTempText>
+          L {Math.round(selectedNow[0].main.temp_min)}°
+        </S.NowMaxMinTempText>
+        <S.NowHutext>Humidity {selectedNow[0].main.humidity}%</S.NowHutext>
+      </S.NowInfoWrap>
       <S.DayListBox>
         <DayBox mode={mode} selectedDatas={selectedDatas} />
       </S.DayListBox>

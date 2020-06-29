@@ -26,7 +26,7 @@ function WeatherBox({
   };
 
   return (
-    <>
+    <S.ListBox>
       {weatherDatas.map((weatherData) => (
         <S.WeatherLi
           key={weatherData.id}
@@ -64,7 +64,7 @@ function WeatherBox({
           </S.DeleteButton>
         </S.WeatherLi>
       ))}
-    </>
+    </S.ListBox>
   );
 }
 

@@ -11,7 +11,7 @@ type DayBoxProps = {
 
 function DayBox({ mode, selectedDatas }: DayBoxProps) {
   const fiveDaysDatas = selectedDatas.map((selectedData) => selectedData.list);
-  const weekAndFiveDatas = useWeekDatas(fiveDaysDatas);
+  const weekAndFiveDatas = useWeekDatas(fiveDaysDatas[0] || []);
 
   return (
     <>

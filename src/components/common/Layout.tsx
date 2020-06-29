@@ -15,16 +15,15 @@ const StyledBg = styled.div`
     mode
       ? `background-image: url('/images/light-mode.jpg')`
       : `background-image: url('/images/dark-mode.jpg')`};
-  background-color: white;
+  background-color: rgb(77, 157, 239);
   height: 100vh;
   padding: 20px 50px;
-  overflow: hidden;
-  ${media.tablet`
-    overflow: auto;
-  `}
+  overflow: auto;
   ${media.mobile`
-    overflow: auto;
-    padding: 20px 20px;
+    padding: 10px 10px;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
   `}
 `;
 
@@ -32,9 +31,14 @@ const StyledArea = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   height: 90%;
+  ${media.tablet`
+    width: 100%;
+  `}
   ${media.mobile`
+    padding-top: 10px;
+    width: 100%;
   `}
 `;
 

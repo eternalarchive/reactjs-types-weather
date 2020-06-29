@@ -85,8 +85,20 @@ export type List = {
   clouds: Clouds;
   wind: Wind;
   sys: Sys;
-  dt_txt: Date;
+  dt_txt: string;
   rain?: Rain;
+};
+
+export type OnlyFiveData = {
+  dt: number;
+  main: MainClass;
+  weather: Weather[];
+  clouds: Clouds;
+  wind: Wind;
+  sys: Sys;
+  dt_txt: string;
+  rain?: Rain;
+  day?: string;
 };
 
 export type Clouds = {

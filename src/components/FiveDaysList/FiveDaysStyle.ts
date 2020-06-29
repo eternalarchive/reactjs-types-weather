@@ -8,11 +8,12 @@ export const FiveDaysSection = styled.section`
   width: 95%;
   margin: 0 auto;
   padding: 50px 40px;
+  overflow-y: auto;
   ${media.tablet`
     padding: 40px 30px;
   `}
   ${media.mobile`
-    padding: 40px 30px;
+    padding: 20px 20px;
   `}
 `;
 
@@ -29,10 +30,16 @@ export const FiveDaysSectionTitle = styled.h2`
 
 export const CityText = styled.p`
   font-size: 7.2rem;
+  ${media.mobile`
+    font-size: 6.0rem;
+  `}
 `;
 
 export const NowTempText = styled.p`
   font-size: 6rem;
+  ${media.mobile`
+    font-size: 4.8rem;
+  `}
 `;
 
 export const NowFeelTempText = styled.p`
@@ -60,6 +67,10 @@ export const NowHutext = styled.p`
 export const DayListBox = styled.ul`
   display: flex;
   overflow-x: scroll;
+  ${media.mobile`
+    display: flex;
+    overflow-x: auto;
+  `}
 `;
 
 export const BacktoHomeIcon = styled.i`
@@ -83,6 +94,9 @@ export const WeatherLi = styled.li`
 
 export const DayText = styled.p`
   font-size: 2.2rem;
+  ${media.mobile`
+    font-size: 1.8rem;
+  `}
 `;
 
 export const WeatherIcon = styled.i`

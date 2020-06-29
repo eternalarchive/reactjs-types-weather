@@ -33,6 +33,7 @@ function* loadWeatherSaga({ payload }: ReturnType<typeof getWeatherSaga>) {
   const weatherDatas = yield select((state) => state.search.weatherDatas);
   const forecastDatas = yield select((state) => state.search.forecastDatas);
   try {
+    if (weatherDatas.length >= 5) return alert('5개까지 등록 가능합니다.');
     yield put(getWeatherAction.request(''));
     const oneRes = yield call(SearchService.getWeatherDatas, payload);
     if (
@@ -49,7 +50,6 @@ function* loadWeatherSaga({ payload }: ReturnType<typeof getWeatherSaga>) {
       }),
     );
   } catch (error) {
-    console.log(error);
     yield put(getWeatherAction.failure(error));
     alert('잘못된 도시정보입니다.');
   }
