@@ -5,7 +5,7 @@ import media from '../../libs/MediaQuery';
 export const FiveDaysSection = styled.section`
   position: relative;
   background-color: rgba(255, 255, 255, 0.2);
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 50px 40px;
   overflow-y: auto;
@@ -31,7 +31,7 @@ export const FiveDaysSectionTitle = styled.h2`
 export const CityText = styled.p`
   font-size: 7.2rem;
   ${media.mobile`
-    font-size: 6.0rem;
+    font-size: 6.6rem;
   `}
 `;
 
@@ -48,7 +48,7 @@ export const NowFeelTempText = styled.p`
 `;
 
 export const NowInfoWrap = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 25px;
   padding-left: 10px;
   border-left: 5px solid white;
 `;
@@ -62,6 +62,11 @@ export const NowMaxMinTempText = styled.span`
 
 export const NowHutext = styled.p`
   font-size: 1.8rem;
+`;
+
+export const WeekWeatherTitle = styled.p`
+  text-align: end;
+  margin: 10px 0;
 `;
 
 export const DayListBox = styled.ul`

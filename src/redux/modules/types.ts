@@ -89,7 +89,7 @@ export type List = {
   rain?: Rain;
 };
 
-export type OnlyFiveData = {
+export type TOnlyFiveData = {
   dt: number;
   main: MainClass;
   weather: Weather[];

@@ -32,9 +32,7 @@ function FiveDaysList({ mode, selectedNow, selectedDatas }: FiveDaysListProps) {
         </S.NowMaxMinTempText>
         <S.NowHutext>Humidity {selectedNow[0].main.humidity}%</S.NowHutext>
       </S.NowInfoWrap>
-      <S.DayListBox>
-        <DayBox mode={mode} selectedDatas={selectedDatas} />
-      </S.DayListBox>
+      <DayBox mode={mode} selectedDatas={selectedDatas} />
       <Link to="/">
         <S.BacktoHomeIcon className="fas fa-arrow-left fa-2x" />
       </Link>

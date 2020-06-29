@@ -77,6 +77,9 @@ export const InfoWrap = styled.div`
 
 export const SelectedCity = styled.h3`
   font-size: 3.2rem;
+  ${media.mobile`
+    font-size: 2.8rem;
+  `}
 `;
 
 export const WeatherIcon = styled.i`
