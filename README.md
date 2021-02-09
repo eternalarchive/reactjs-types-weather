@@ -35,9 +35,9 @@ openweathermaps api를 활용한 도시별 날씨 서비스
 1. styled-components
 2. axios
 3. react-router
-4. React-router-dom
+4. react-router-dom
 5. typesafe-actions
-6. moment
+6. ~~moment~~ dayjs
 
 <br />
 
