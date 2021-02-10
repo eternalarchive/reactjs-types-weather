@@ -5,7 +5,7 @@ import WeatherBox from './WeatherBox';
 
 type WeatherListProps = {
   weatherDatas: TWeather[];
-  mode: boolean;
+  mode: string;
   selectCity: (cityId: number) => void;
   deleteWeather: (id: number) => void;
 };

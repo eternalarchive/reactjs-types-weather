@@ -11,7 +11,7 @@ function WeatherListContainer() {
     (state: rootState) => state.search.weatherDatas,
   );
 
-  const mode: boolean = useSelector((state: rootState) => state.view.mode);
+  const mode: string = useSelector((state: rootState) => state.view.mode);
 
   const dispatch = useDispatch();
 

@@ -5,7 +5,7 @@ import useWeekDatas from '../../hooks/useWeekDatas';
 import { getIcon } from '../common/Icons';
 
 type DayBoxProps = {
-  mode: boolean;
+  mode: string;
   selectedDatas: Tforecast[];
 };
 
