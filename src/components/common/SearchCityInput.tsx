@@ -36,8 +36,10 @@ function SearchCityInput({ getWeather }: SearchCityInputProps) {
   const SearchCity = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const regexr = /[ㄱ-ㅎㅏ-ㅣ]+/g;
     if (!cityInputRef.current) return;
-    if (regexr.test(cityInputRef.current.value))
-      return (cityInputRef.current.value = '');
+    if (regexr.test(cityInputRef.current.value)) {
+      alert("도시명을 영어로 입력해주세요.");
+      return cityInputRef.current.value = '';
+    }
     const cityName = cityInputRef.current.value.trim();
     if (e.key === 'Enter' && cityName !== '') {
       getWeather(cityName);
