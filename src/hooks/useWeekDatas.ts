@@ -1,7 +1,7 @@
+import dayjs from 'dayjs';
 import { List, TOnlyFiveData } from '../redux/modules/types';
 
 function useWeekDatas(fiveDaysDatas: List[]) {
-  const week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   const onlyFiveDatas: TOnlyFiveData[] =
     fiveDaysDatas &&
     fiveDaysDatas.filter(
@@ -10,9 +10,8 @@ function useWeekDatas(fiveDaysDatas: List[]) {
     );
 
   onlyFiveDatas.map((onlyFiveData: TOnlyFiveData) => {
-    let dayNumber = new Date(onlyFiveData.dt_txt).getDay();
-    dayNumber = dayNumber === 6 ? -1 : dayNumber;
-    onlyFiveData.day = week[dayNumber + 1];
+    const day = dayjs(onlyFiveData.dt_txt).format('ddd');
+    onlyFiveData.day = day.toUpperCase();
     return onlyFiveData;
   });
 
