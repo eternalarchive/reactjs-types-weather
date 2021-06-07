@@ -51,6 +51,7 @@ export const ChangeModeButton = styled.button`
   width: 20px;
   height: 20px;
   border-radius: 20px;
+  margin-bottom: 20px;
   background-color: white;
   outline: none;
   cursor: pointer;

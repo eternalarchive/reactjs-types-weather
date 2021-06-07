@@ -13,7 +13,6 @@ export const HomeLayout = styled.div`
   display: flex;
   justify-content: space-evenly;
   padding: 30px 0px;
-  height: 100%;
   ${media.tablet`
     display: block;
     margin: 0 auto;

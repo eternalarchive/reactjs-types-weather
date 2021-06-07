@@ -14,6 +14,7 @@ export const WeatherSection = styled.section`
     margin-top: 30px;
   `}
   ${media.mobile`
+    width: 30rem;
     height: auto;
     overflow: auto;
     margin-top: 20px;
@@ -38,7 +39,7 @@ export const WeatherLi = styled.li`
   background-color: transparent;
   display: flex;
   position: relative;
-  width: 95%;
+  width: 100%;
   padding: 20px 30px;
   margin-bottom: 20px;
   background-color: ${({ mode }: Tmode) =>
@@ -53,7 +54,7 @@ export const WeatherLi = styled.li`
         mode === 'light' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
   ${media.mobile`
-    width: 80%;
+    width: 100%;
   `}
 `;
 

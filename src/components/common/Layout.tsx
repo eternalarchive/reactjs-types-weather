@@ -20,7 +20,7 @@ const StyledBg = styled.div`
   padding: 20px 50px;
   overflow: auto;
   ${media.mobile`
-    padding: 10px 10px;
+    padding: 10px 30px;
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
@@ -31,15 +31,8 @@ const StyledArea = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 95%;
-  height: 90%;
-  ${media.tablet`
-    width: 100%;
-  `}
-  ${media.mobile`
-    padding-top: 10px;
-    width: 100%;
-  `}
+  width: 100%;
+  margin-top: 20px;
 `;
 
 function Layout({ children }: LayoutProps) {

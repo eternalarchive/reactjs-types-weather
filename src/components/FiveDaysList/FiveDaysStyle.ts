@@ -13,7 +13,9 @@ export const FiveDaysSection = styled.section`
     padding: 40px 30px;
   `}
   ${media.mobile`
-    padding: 20px 20px;
+    width: 90%;
+    padding: 30px;
+    margin: 0;
   `}
 `;
 
@@ -72,10 +74,6 @@ export const WeekWeatherTitle = styled.p`
 export const DayListBox = styled.ul`
   display: flex;
   overflow-x: scroll;
-  ${media.mobile`
-    display: flex;
-    overflow-x: auto;
-  `}
 `;
 
 export const BacktoHomeIcon = styled.i`
@@ -95,6 +93,10 @@ export const WeatherLi = styled.li`
   padding: 20px 30px;
   margin: 0 10px;
   backdrop-filter: blur(3px);
+  ${media.mobile`
+    width: 70%;
+    padding: 20px 10px;
+  `}
 `;
 
 export const DayText = styled.p`
