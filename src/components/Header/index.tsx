@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './HeaderStyle';
 import NowTime from './NowTime';
 import ModeContainer from '../../containers/ModeContainer';
-import { Link } from 'react-router-dom';
 
 function Header() {
   return (
