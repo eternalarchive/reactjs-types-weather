@@ -2,13 +2,13 @@ import React from 'react';
 import * as S from './HeaderStyle';
 
 type LightDartModeButtonProps = {
-  mode: boolean;
-  changeMode: (mode: boolean) => void;
+  mode: string;
+  changeMode: (mode: string) => void;
 };
 
 function LightDartModeButton({ mode, changeMode }: LightDartModeButtonProps) {
   const selectMode = () => {
-    changeMode(!mode);
+    changeMode(mode === 'light' ? 'dark' : 'light');
   };
 
   return (

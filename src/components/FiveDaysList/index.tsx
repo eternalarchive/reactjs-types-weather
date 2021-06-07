@@ -5,7 +5,7 @@ import * as S from './FiveDaysStyle';
 import { Tforecast, TWeather } from '../../redux/modules/types';
 
 type FiveDaysListProps = {
-  mode: boolean;
+  mode: string;
   selectedNow: TWeather[];
   selectedDatas: Tforecast[];
 };

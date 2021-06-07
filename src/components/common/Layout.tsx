@@ -12,7 +12,7 @@ type LayoutProps = {
 
 const StyledBg = styled.div`
   ${({ mode }: Tmode) =>
-    mode
+    mode === 'light'
       ? `background-image: url('/images/light-mode.jpg')`
       : `background-image: url('/images/dark-mode.jpg')`};
   background-color: rgb(77, 157, 239);
@@ -43,7 +43,7 @@ const StyledArea = styled.div`
 `;
 
 function Layout({ children }: LayoutProps) {
-  const mode: boolean = useSelector((state: rootState) => state.view.mode);
+  const mode: string = useSelector((state: rootState) => state.view.mode);
 
   return (
     <StyledBg mode={mode}>

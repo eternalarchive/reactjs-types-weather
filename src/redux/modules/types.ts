@@ -159,5 +159,5 @@ export type Wind = {
 
 // mode
 export type Tmode = {
-  mode: boolean;
+  mode: string;
 };

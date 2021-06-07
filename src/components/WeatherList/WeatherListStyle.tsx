@@ -42,7 +42,7 @@ export const WeatherLi = styled.li`
   padding: 20px 30px;
   margin-bottom: 20px;
   background-color: ${({ mode }: Tmode) =>
-    mode ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
+    mode === 'light' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'};
   backdrop-filter: blur(3px);
   :nth-last-child() {
     margin-bottom: 0;
@@ -50,7 +50,7 @@ export const WeatherLi = styled.li`
   :hover {
     box-shadow: 5px 5px 10px
       ${({ mode }: Tmode) =>
-        mode ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
+        mode === 'light' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.5)'};
   }
   ${media.mobile`
     width: 80%;

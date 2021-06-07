@@ -40,7 +40,7 @@ export const ModeButtonBg = styled.div`
 export const ChangeModeButton = styled.button`
   position: absolute;
   ${({ mode }: Tmode) =>
-    mode
+    mode === 'light'
       ? css`
           left: 0;
         `

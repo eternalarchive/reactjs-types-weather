@@ -91,7 +91,7 @@ export const WeatherLi = styled.li`
   flex-basis: 20%;
   min-width: 16rem;
   background-color: ${({ mode }: Tmode) =>
-    mode ? 'rgba(104, 172, 240, 0.6)' : 'rgba(34, 50, 77, 0.6)'};
+    mode === 'light' ? 'rgba(104, 172, 240, 0.6)' : 'rgba(34, 50, 77, 0.6)'};
   padding: 20px 30px;
   margin: 0 10px;
   backdrop-filter: blur(3px);

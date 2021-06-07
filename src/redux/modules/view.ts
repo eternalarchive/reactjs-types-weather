@@ -15,7 +15,7 @@ const success = `${prefix}SUCCESS`;
 const fail = `${prefix}FAIL`;
 
 type TViewSuccess = {
-  mode?: boolean;
+  mode?: string;
   selectedNow?: TWeather[];
   selectedDatas?: Tforecast[];
 };
@@ -53,7 +53,7 @@ function* getCityIdSaga({ payload }: ReturnType<typeof getSelectedCitySaga>) {
   }
 }
 
-export const SelectModeSaga = createAction('CHANGE_MODE_SAGA')<boolean>();
+export const SelectModeSaga = createAction('CHANGE_MODE_SAGA')<string>();
 
 function* changeModeSaga({ payload }: ReturnType<typeof SelectModeSaga>) {
   try {
@@ -75,7 +75,7 @@ export function* viewSaga() {
 }
 
 type TinitialState = {
-  mode: boolean;
+  mode: string;
   selectedNow: TWeather[];
   selectedDatas: Tforecast[];
   loading: boolean;
@@ -84,7 +84,7 @@ type TinitialState = {
 
 // initialState
 const initialState: TinitialState = {
-  mode: true,
+  mode: 'light',
   selectedNow: [],
   selectedDatas: [],
   loading: false,

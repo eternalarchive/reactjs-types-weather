@@ -5,11 +5,11 @@ import { rootState } from '../redux/modules/reducer';
 import { SelectModeSaga } from '../redux/modules/view';
 
 function ModeContainer() {
-  const mode: boolean = useSelector((state: rootState) => state.view.mode);
+  const mode: string = useSelector((state: rootState) => state.view.mode);
   const dispatch = useDispatch();
 
   const changeMode = useCallback(
-    (mode: boolean) => {
+    (mode: string) => {
       dispatch(SelectModeSaga(mode));
     },
     [dispatch],
