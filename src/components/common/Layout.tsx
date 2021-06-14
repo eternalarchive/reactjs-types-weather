@@ -15,12 +15,14 @@ const StyledBg = styled.div`
     mode === 'light'
       ? `background-image: url('/images/light-mode.jpg')`
       : `background-image: url('/images/dark-mode.jpg')`};
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-color: rgb(77, 157, 239);
   height: 100vh;
   padding: 20px 50px;
   overflow: auto;
   ${media.mobile`
-    padding: 10px 30px;
+    padding: 10px 10px;
     min-height: 100vh;
     height: auto;
     overflow-x: hidden;
