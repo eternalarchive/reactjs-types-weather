@@ -34,7 +34,7 @@ function FiveDaysList({ mode, selectedNow, selectedDatas }: FiveDaysListProps) {
       </S.NowInfoWrap>
       <DayBox mode={mode} selectedDatas={selectedDatas} />
       <Link to="/">
-        <S.BacktoHomeIcon className="fas fa-arrow-left fa-2x" />
+        <S.BacktoHomeIcon className="fas fa-arrow-left fa-2x" aria-label="홈으로 돌아가기"/>
       </Link>
     </S.FiveDaysSection>
   );

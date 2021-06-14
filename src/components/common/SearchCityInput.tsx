@@ -64,7 +64,7 @@ function SearchCityInput({ getWeather }: SearchCityInputProps) {
         autoFocus={true}
         ref={cityInputRef}
       />
-      <StyledSearchButton onClick={SearchCityOnButton}>
+      <StyledSearchButton onClick={SearchCityOnButton} aria-label="검색하기">
         <i className="fas fa-search"></i>
       </StyledSearchButton>
     </StyledInputArea>

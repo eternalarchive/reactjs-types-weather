@@ -15,7 +15,7 @@ function LightDartModeButton({ mode, changeMode }: LightDartModeButtonProps) {
     <div>
       <S.ModeIcon className="fas fa-sun" />
       <S.ModeButtonBg>
-        <S.ChangeModeButton onClick={selectMode} mode={mode} />
+        <S.ChangeModeButton onClick={selectMode} mode={mode} aria-label={`현재 ${mode} 클릭시 ${mode === 'light' ? '다크모드' : '라이트모드'}`}/>
       </S.ModeButtonBg>
       <S.ModeIcon className="fas fa-moon" />
     </div>

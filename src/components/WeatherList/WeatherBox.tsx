@@ -59,7 +59,7 @@ function WeatherBox({
           <Link to="/weather/forecast">
             <S.ViewMore>View More</S.ViewMore>
           </Link>
-          <S.DeleteButton onClick={() => deleteCity(weatherData.id)}>
+          <S.DeleteButton onClick={() => deleteCity(weatherData.id)} aria-label={`${weatherData.name} 삭제`}>
             <i className="fas fa-times" />
           </S.DeleteButton>
         </S.WeatherLi>
